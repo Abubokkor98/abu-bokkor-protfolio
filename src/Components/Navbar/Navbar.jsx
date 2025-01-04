@@ -39,10 +39,10 @@ export default function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/work"
+            to="/projects"
             className="py-1 text-white text-base font-normal border-b-2 border-transparent transition-all duration-700 hover:border-[#a6bbcc] hover:text-[#a6bbcc]"
           >
-            Work
+            Projects
           </NavLink>
         </li>
         <li>
