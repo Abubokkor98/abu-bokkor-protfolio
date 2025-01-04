@@ -1,32 +1,33 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function About() {
+  const aboutText =
+    "I am Abu Bokkor Siddik, a graduate in Computer Science and Engineering from the National University of Bangladesh. As a Front-end Developer, I specialize in building responsive, user-friendly web applications using HTML, CSS, JavaScript, ReactJS, and TailwindCSS. I also have experience with back-end technologies like MongoDB and Express.js. I’m committed to continuous learning and creating innovative, impactful solutions.";
+
   return (
-    <section id="about" className="py-20 bg-gray-800 text-white">
+    <section id="about" className="py-20 text-gray-800 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
-        <div className="flex justify-between items-center mb-12">
+        <header className="flex justify-between items-center mb-12">
           {/* Header */}
-          <div className="h-text">
-            <h2 className="text-4xl font-bold">About</h2>
-          </div>
+          <h2 className="text-4xl font-bold text-blue-600">About Me</h2>
 
           {/* Read More Button */}
-          <div className="h-btn">
-            <Link to={'/about'} className="text-lg text-[#a6bbcc] flex items-center space-x-2 hover:text-white transition-all">
-              <span>Read more</span>
-              <i className="ri-arrow-right-line"></i>
-            </Link>
-          </div>
-        </div>
+          <Link
+            to={"/about"}
+            aria-label="Read more about me"
+            className="text-lg text-blue-600 flex items-center space-x-2 hover:text-blue-500 transition-all"
+          >
+            <span>Read more</span>
+            <FaArrowRight />
+          </Link>
+        </header>
 
         {/* About Text */}
-        <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-          I am Abu Bokkor Siddik,<br /> 
-          I recently graduated in Computer Science and Engineering from the National University of Bangladesh. <br />
-          As a Front-end Website Designer specializing in crafting visually stunning and user-centric portfolio websites, I bring a blend of creativity and technical proficiency to every project. With a keen eye for design aesthetics and a solid foundation in HTML, CSS, and JavaScript, I transform ideas into captivating and responsive web experiences.<br />
-          I am very passionate about improving my coding skills & developing applications & websites.
-        </p>
+        <article className="text-base sm:text-lg leading-relaxed text-gray-700 mb-6 w-full md:w-10/12">
+          <p>{aboutText}</p>
+        </article>
       </div>
     </section>
   );

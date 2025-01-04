@@ -1,60 +1,68 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaReact, FaNode, FaGithub, FaCloud } from "react-icons/fa";  
+import { FaHtml5, FaCss3Alt, FaReact, FaNode, FaGithub, FaCloud } from "react-icons/fa";
 import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
 
 const skills = [
   {
     category: "Frontend Development",
     items: [
-      { name: "HTML", icon: <FaHtml5 size={28} className="text-[#a6bbcc]" /> },
-      { name: "CSS", icon: <FaCss3Alt size={28} className="text-[#a6bbcc]" /> },
-      { name: "ReactJS", icon: <FaReact size={28} className="text-[#a6bbcc]" /> },
-      { name: "TailwindCSS", icon: <SiTailwindcss size={28} className="text-[#a6bbcc]" /> },
+      { name: "HTML", icon: <FaHtml5 size={32} className="text-blue-600" /> },
+      { name: "CSS", icon: <FaCss3Alt size={32} className="text-blue-600" /> },
+      { name: "ReactJS", icon: <FaReact size={32} className="text-blue-600" /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss size={32} className="text-blue-600" /> },
     ],
   },
   {
     category: "Backend Development",
     items: [
-      { name: "Node.js", icon: <FaNode size={28} className="text-[#a6bbcc]" /> },
-      { name: "Express.js", icon: <SiExpress size={28} className="text-[#a6bbcc]" /> },
-      { name: "MongoDB", icon: <SiMongodb size={28} className="text-[#a6bbcc]" /> },
+      { name: "Node.js", icon: <FaNode size={32} className="text-blue-600" /> },
+      { name: "Express.js", icon: <SiExpress size={32} className="text-blue-600" /> },
+      { name: "MongoDB", icon: <SiMongodb size={32} className="text-blue-600" /> },
     ],
   },
   {
     category: "Tools & Platforms",
     items: [
-      { name: "Git & GitHub", icon: <FaGithub size={28} className="text-[#a6bbcc]" /> },
-      { name: "Firebase", icon: <FaCloud size={28} className="text-[#a6bbcc]" /> },
+      { name: "Git & GitHub", icon: <FaGithub size={32} className="text-blue-600" /> },
+      { name: "Firebase", icon: <FaCloud size={32} className="text-blue-600" /> },
     ],
   },
 ];
 
 const Skills = () => {
   return (
-    <section className=" py-16">
-      <div className="container mx-auto px-6 text-center text-[#fff]">
-        <h2 className="text-4xl font-extrabold text-[#a6bbcc] mb-8">Skills</h2>
+    <section className="py-16 text-gray-800 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-5xl font-extrabold text-blue-600 mb-8">Skills</h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
-            <div
+            <article
               key={index}
-              className="bg-gray-800 rounded-xl shadow-lg p-6 transition-transform transform hover:scale-105"
+              className="rounded-xl shadow-lg p-8 transition-transform transform hover:scale-105 bg-white"
+              aria-labelledby={`skill-category-${index}`}
             >
-              <h3 className="text-xl font-semibold text-[#a6bbcc] mb-4">{skill.category}</h3>
-              <div className="flex flex-wrap justify-center gap-6 mb-4">
+              <h3
+                id={`skill-category-${index}`}
+                className="text-2xl font-semibold text-blue-600 mb-4"
+              >
+                {skill.category}
+              </h3>
+              <div className="flex flex-wrap justify-center gap-8 mb-4">
                 {skill.items.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col items-center text-[#fff]"
+                    className="flex flex-col items-center text-gray-800"
+                    aria-label={item.name}
+                    title={item.name}
                   >
-                    <div className="bg-gradient-to-r p-3 rounded-full shadow-md mb-2">
+                    <div className="p-4 rounded-full shadow-md mb-2 bg-gray-100">
                       {item.icon}
                     </div>
-                    <span className="text-sm">{item.name}</span>
+                    <span className="text-lg">{item.name}</span>
                   </div>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
