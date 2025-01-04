@@ -13,7 +13,7 @@ import { LuMailOpen } from "react-icons/lu";
 
 export default function Banner() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between text-white bg-[var(--bg-color)] p-10">
+    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-white bg-[var(--bg-color)]">
       {/* Text Section */}
       <div className="p-14 flex-1">
         <h5 className="text-2xl font-medium">Hello, I'm Abu Bokkor Siddik</h5>

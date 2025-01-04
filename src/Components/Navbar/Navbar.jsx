@@ -3,12 +3,15 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 right-0 w-full z-[1000] px-4 sm:px-16 py-6 flex items-center justify-between bg-gray-800 transition-all duration-700">
+    <nav className="sticky top-0 right-0 w-full z-[1000] px-4 sm:px-16 py-6 flex items-center justify-between bg-gray-800 transition-all duration-700 max-w-6xl mx-auto">
+      {/* Logo */}
       <Link to="/">
         <div className="flex items-center text-white text-2xl font-semibold">
           AB`
         </div>
       </Link>
+
+      {/* Navbar Links */}
       <ul className="flex space-x-6">
         <li>
           <NavLink
