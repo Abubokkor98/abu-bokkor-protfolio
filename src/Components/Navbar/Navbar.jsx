@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 right-0 w-full z-[1000] px-4 sm:px-16 py-6 flex items-center justify-between bg-gray-800 transition-all duration-700">
+    <nav className="sticky top-0 right-0 w-full z-[1000] px-4 sm:px-16 py-6 flex items-center justify-between bg-gray-800 transition-all duration-700">
       <Link to="/">
         <div className="flex items-center text-white text-2xl font-semibold">
           AB`
@@ -51,6 +51,6 @@ export default function Navbar() {
           </NavLink>
         </li>
       </ul>
-    </header>
+    </nav>
   );
 }
