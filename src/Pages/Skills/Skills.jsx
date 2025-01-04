@@ -1,5 +1,13 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaReact, FaNode, FaGithub, FaCloud } from "react-icons/fa";
+import Marquee from "react-fast-marquee";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNode,
+  FaGithub,
+  FaCloud,
+} from "react-icons/fa";
 import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
 
 const skills = [
@@ -8,23 +16,41 @@ const skills = [
     items: [
       { name: "HTML", icon: <FaHtml5 size={32} className="text-blue-600" /> },
       { name: "CSS", icon: <FaCss3Alt size={32} className="text-blue-600" /> },
-      { name: "ReactJS", icon: <FaReact size={32} className="text-blue-600" /> },
-      { name: "TailwindCSS", icon: <SiTailwindcss size={32} className="text-blue-600" /> },
+      {
+        name: "ReactJS",
+        icon: <FaReact size={32} className="text-blue-600" />,
+      },
+      {
+        name: "TailwindCSS",
+        icon: <SiTailwindcss size={32} className="text-blue-600" />,
+      },
     ],
   },
   {
     category: "Backend Development",
     items: [
       { name: "Node.js", icon: <FaNode size={32} className="text-blue-600" /> },
-      { name: "Express.js", icon: <SiExpress size={32} className="text-blue-600" /> },
-      { name: "MongoDB", icon: <SiMongodb size={32} className="text-blue-600" /> },
+      {
+        name: "Express.js",
+        icon: <SiExpress size={32} className="text-blue-600" />,
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb size={32} className="text-blue-600" />,
+      },
     ],
   },
   {
     category: "Tools & Platforms",
     items: [
-      { name: "Git & GitHub", icon: <FaGithub size={32} className="text-blue-600" /> },
-      { name: "Firebase", icon: <FaCloud size={32} className="text-blue-600" /> },
+      {
+        name: "Git & GitHub",
+        icon: <FaGithub size={32} className="text-blue-600" />,
+      },
+      {
+        name: "Firebase",
+        icon: <FaCloud size={32} className="text-blue-600" />,
+      },
     ],
   },
 ];
@@ -47,21 +73,28 @@ const Skills = () => {
               >
                 {skill.category}
               </h3>
-              <div className="flex flex-wrap justify-center gap-8 mb-4">
-                {skill.items.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col items-center text-gray-800"
-                    aria-label={item.name}
-                    title={item.name}
-                  >
-                    <div className="p-4 rounded-full shadow-md mb-2 bg-gray-100">
-                      {item.icon}
+              <Marquee
+                speed={80}
+                pauseOnHover={false}
+                gradient={false}
+                direction="left"
+              >
+                <div className="flex flex-wrap justify-center gap-8 mb-4">
+                  {skill.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex flex-col items-center text-gray-800"
+                      aria-label={item.name}
+                      title={item.name}
+                    >
+                      <div className="p-4 rounded-full shadow-md mb-4 bg-gray-100">
+                        {item.icon}
+                      </div>
+                      <span className="text-lg">{item.name}</span>
                     </div>
-                    <span className="text-lg">{item.name}</span>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              </Marquee>
             </article>
           ))}
         </div>

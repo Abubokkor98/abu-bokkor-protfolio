@@ -1,29 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLink, FaNodeJs } from "react-icons/fa"; 
-import { SiReact, SiTailwindcss, SiMongodb } from "react-icons/si"; 
+import { FaGithub, FaLink, FaNodeJs } from "react-icons/fa";
+import { SiReact, SiTailwindcss, SiMongodb } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
-    name: "Project One",
+    name: "PlayGear",
     description:
-      "A brief description of Project One. It involves frontend development using React.",
-    link: "https://project-one-link.com",
-    repo: "https://github.com/username/project-one",
-    details: "/project-one-details",
-    techStack: [<SiReact />, <SiTailwindcss />],
-    image: "https://via.placeholder.com/600x400",
+      "A sports accessories e-commerce website featuring user authentication, product management, dark/light theme toggle, and detailed product animations.",
+    link: "https://playgear.netlify.app",
+    repo: "https://github.com/Abubokkor98/playgear",
+    details: "/playgear-details",
+    techStack: [<SiReact />, <SiTailwindcss />, <SiMongodb />, <FaNodeJs />],
+    image: "https://i.ibb.co.com/GJMxjwf/Screenshot-38.png",
   },
   {
-    name: "Project Two",
+    name: "Taste Treasury",
     description:
-      "This project showcases full-stack capabilities with Node.js and MongoDB.",
-    link: "https://project-two-link.com",
-    repo: "https://github.com/username/project-two",
-    details: "/project-two-details",
-    techStack: [<FaNodeJs />, <SiMongodb />],
-    image: "https://via.placeholder.com/600x400",
+      "A full-stack restaurant management website built with the MERN stack, including features like menu management and reservation systems.",
+    link: "https://taste-treasury.netlify.app/",
+    repo: "https://github.com/Abubokkor98/taste-treasury-client",
+    details: "/taste-treasury-details",
+    techStack: [<SiReact />, <SiTailwindcss />, <SiMongodb />, <FaNodeJs />],
+    image: "https://i.ibb.co.com/tq9TQk9/tastetreasury.png",
   },
   // More projects
 ];
@@ -55,7 +55,9 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{project.name}</h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {project.name}
+                </h3>
                 <p className="text-gray-700 mb-4">{project.description}</p>
                 <div className="flex justify-center space-x-4 mb-4">
                   {project.techStack.map((icon, index) => (
