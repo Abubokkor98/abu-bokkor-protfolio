@@ -3,16 +3,11 @@ import Navbar from "../Components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "../Components/Footer/Footer";
 
-
 export default function MainLayout() {
-
-
   return (
-    <div className="">
+    <div>
       <Navbar />
-      <div className="min-h-[90vh]">
-        <Outlet />
-      </div>
+      <Outlet />
       <Footer />
     </div>
   );
