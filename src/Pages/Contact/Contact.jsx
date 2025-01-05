@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { FaArrowRight, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -56,11 +61,43 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
         <header className="flex justify-between items-center mb-12">
           {/* Header */}
-          <h2 className="text-4xl font-bold text-blue-600">Contact Me</h2>
+          <h2 className="text-4xl font-bold text-blue-600">Contact Me:</h2>
         </header>
+        {/* Contact Information */}
+        <div className="p-8">
+          <div className="flex items-center mb-4">
+            <FaEnvelope className="text-blue-600 mr-4" size={24} />
+            <a
+              href="mailto:example@example.com"
+              className="text-lg text-gray-800 hover:text-blue-600"
+            >
+              mail.abubokkor@gmail.com
+            </a>
+          </div>
+          <div className="flex items-center mb-4">
+            <FaPhoneAlt className="text-blue-600 mr-4" size={24} />
+            <a
+              href="tel:+880123456789"
+              className="text-lg text-gray-800 hover:text-blue-600"
+            >
+              +88 01778313311
+            </a>
+          </div>
+          <div className="flex items-center">
+            <FaWhatsapp className="text-green-600 mr-4" size={24} />
+            <a
+              href="https://wa.me/+8801778313311"
+              className="text-lg text-gray-800 hover:text-green-600"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
 
         {/* Contact Form */}
-        <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="bg-white p-8 rounded-lg shadow-lg mb-12">
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <input

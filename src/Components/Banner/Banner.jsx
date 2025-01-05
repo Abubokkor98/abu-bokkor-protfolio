@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react"; 
 import displayImg from "../../assets/home.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   FaArrowDown,
   FaFacebook,
@@ -10,6 +11,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { LuMailOpen } from "react-icons/lu";
+import { Typed } from "react-typed";
 
 const socialLinks = [
   {
@@ -17,16 +19,8 @@ const socialLinks = [
     label: "GitHub",
     icon: <FaGithub />,
   },
-  {
-    href: "https://t.me/AbuBokkor98",
-    label: "Telegram",
-    icon: <FaTelegram />,
-  },
-  {
-    href: "https://twitter.com/AB_coc",
-    label: "Twitter",
-    icon: <FaTwitter />,
-  },
+  { href: "https://t.me/AbuBokkor98", label: "Telegram", icon: <FaTelegram /> },
+  { href: "https://twitter.com/AB_coc", label: "Twitter", icon: <FaTwitter /> },
   {
     href: "https://www.facebook.com/ParadoxicalAb",
     label: "Facebook",
@@ -40,25 +34,51 @@ const socialLinks = [
 ];
 
 export default function Banner() {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    if (typedRef.current) {
+      new Typed(typedRef.current, {
+        strings: [
+          "Front End Developer",
+          "React.js Developer",
+          "JavaScript Aficionado",
+          "Web Enthusiast",
+        ],
+        typeSpeed: 70,
+        backSpeed: 60,
+        loop: true,
+      });
+    }
+  }, []);
+
   return (
-    <section
+    <motion.section
       id="banner"
-      className="flex flex-col md:flex-row items-center justify-between text-gray-800 bg-white p-8 md:p-14 rounded-lg shadow-lg"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col md:flex-row items-center justify-between text-gray-800 bg-white p-8 md:p-14 md:w-10/12 mx-auto"
     >
       {/* Text Section */}
       <div className="flex-1">
-        <h5 className="text-2xl font-medium text-gray-600">
-          Hello, I'm Abu Bokkor Siddik
+        <h5 className="text-2xl md:text-3xl font-medium text-gray-600">
+          Hello, I&apos;m Abu Bokkor Siddik
         </h5>
-        <h1 className="mt-4 font-extrabold text-blue-600 text-5xl md:text-6xl leading-tight">
-          Front End <br /> Developer
+        <h1 className="mt-4 font-extrabold text-blue-600 text-4xl md:text-5xl lg:text-6xl leading-tight">
+          <span ref={typedRef}></span>
         </h1>
 
         {/* Social Links */}
-        <div className="mt-6">
+        <motion.div
+          className="mt-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           <div className="flex items-center mb-7">
-            <h2 className="mr-5 text-lg font-semibold">Follow me on</h2>
-            <div className="flex items-center gap-4 text-blue-600 text-xl">
+            <h2 className="mr-5 text-lg md:text-xl font-semibold">Follow me on</h2>
+            <div className="flex items-center gap-4 text-blue-600 text-xl md:text-2xl">
               {socialLinks.map(({ href, label, icon }) => (
                 <a
                   key={label}
@@ -96,17 +116,22 @@ export default function Banner() {
               Download my CV
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Image Section */}
-      <div className="w-full md:w-[460px] h-[460px] flex items-center justify-center mt-6 md:mt-0">
+      <motion.div
+        className="w-full md:w-[460px] h-[460px] flex items-center justify-center mt-6 md:mt-0"
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <img
           src={displayImg}
           alt="Abu Bokkor Siddik's profile picture"
           className="w-full h-full object-cover rounded-lg shadow-lg transition-transform transform hover:scale-105"
         />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

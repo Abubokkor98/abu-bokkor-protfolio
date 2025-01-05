@@ -64,7 +64,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <article
               key={index}
-              className="rounded-xl shadow-lg p-8 transition-transform transform hover:scale-105 bg-white"
+              className="rounded-xl shadow-lg p-8  bg-white"
               aria-labelledby={`skill-category-${index}`}
             >
               <h3
