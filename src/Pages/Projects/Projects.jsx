@@ -32,7 +32,10 @@ const Projects = () => {
 
   return (
     <div className="py-16 bg-gray-50">
-      <h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">My Modern Projects</h2>
+      <h2 className="text-5xl font-extrabold text-center text-blue-600 mb-12">My Projects</h2>
+      <p className="text-center text-gray-600 text-lg w-10/12 md:w-7/12 mx-auto mb-12">
+    Explore my collection of web development projects showcasing my skills in building interactive, responsive, and user-friendly applications. Each project is designed to solve real-world problems with a focus on clean code and innovative solutions.
+  </p>
       <div className="grid grid-cols-1 gap-8 w-9/12 mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />

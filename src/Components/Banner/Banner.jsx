@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"; 
+import React, { useRef, useEffect } from "react";
 import displayImg from "../../assets/home.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -58,14 +58,14 @@ export default function Banner() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col md:flex-row items-center justify-between text-gray-800 bg-white p-8 md:p-14 md:w-10/12 mx-auto"
+      className="flex flex-col md:flex-row items-center justify-between text-gray-800 bg-white p-6 sm:p-8 w-full lg:w-10/12 mx-auto"
     >
       {/* Text Section */}
-      <div className="flex-1">
-        <h5 className="text-2xl md:text-3xl font-medium text-gray-600">
+      <div className="flex-1 text-center sm:text-left ">
+        <h5 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-600">
           Hello, I&apos;m Abu Bokkor Siddik
         </h5>
-        <h1 className="mt-4 font-extrabold text-blue-600 text-4xl md:text-5xl lg:text-6xl leading-tight">
+        <h1 className="mt-4 font-extrabold text-blue-600 text-2xl sm:text-4xl md:text-4xl lg:text-5xl leading-tight">
           <span ref={typedRef}></span>
         </h1>
 
@@ -76,9 +76,11 @@ export default function Banner() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <div className="flex items-center mb-7">
-            <h2 className="mr-5 text-lg md:text-xl font-semibold">Follow me on</h2>
-            <div className="flex items-center gap-4 text-blue-600 text-xl md:text-2xl">
+          <div className="flex items-center justify-center sm:justify-start mb-7">
+            <h2 className="mr-5 text-md sm:text-lg font-semibold">
+              Follow me on
+            </h2>
+            <div className="flex items-center gap-4 text-blue-600 text-xl sm:text-2xl">
               {socialLinks.map(({ href, label, icon }) => (
                 <a
                   key={label}
@@ -95,7 +97,7 @@ export default function Banner() {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
             <Link
               to="mailto:abubokkorsiddik698@hotmail.com"
               target="_blank"
@@ -121,7 +123,7 @@ export default function Banner() {
 
       {/* Image Section */}
       <motion.div
-        className="w-full md:w-[460px] h-[460px] flex items-center justify-center mt-6 md:mt-0"
+        className="w-full md:w-[280px] md:h-[280px] lg:w-[460px] lg:h-[460px] flex items-center justify-center mt-6 md:mt-0"
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}

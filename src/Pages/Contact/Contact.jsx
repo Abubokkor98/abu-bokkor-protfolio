@@ -129,7 +129,7 @@ const Contact = () => {
                 className="w-full px-4 py-3 text-lg rounded-lg bg-gray-100 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
-            <div>
+            <div className="w-8/12 mx-auto">
               <button
                 type="submit"
                 className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition duration-300"
