@@ -58,7 +58,7 @@ export default function Banner() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col md:flex-row items-center justify-between text-gray-800 bg-white p-6 sm:p-8 w-full lg:w-10/12 mx-auto"
+      className="flex flex-col md:flex-row items-center justify-between text-gray-800 bg-white p-6 sm:p-8 w-full lg:w-10/12 mx-auto mt-12"
     >
       {/* Text Section */}
       <div className="flex-1 text-center sm:text-left ">
@@ -131,7 +131,7 @@ export default function Banner() {
         <img
           src={displayImg}
           alt="Abu Bokkor Siddik's profile picture"
-          className="w-full h-full object-cover rounded-lg shadow-lg transition-transform transform hover:scale-105"
+          className="w-full h-full object-cover rounded-lg shadow-lg"
         />
       </motion.div>
     </motion.section>
