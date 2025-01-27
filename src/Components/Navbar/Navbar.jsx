@@ -16,8 +16,8 @@ export default function Navbar() {
     } hover:text-blue-600`;
 
   return (
-    <div className="sticky top-0 w-full z-50 px-4 sm:px-8 py-4 bg-white shadow-md transition-all duration-300 ">
-      <nav className=" flex items-center justify-between lg:w-10/12 mx-auto">
+    <div className="sticky top-0 w-full z-50 px-4 sm:px-20 py-4 bg-white shadow-md transition-all duration-300 ">
+      <nav className=" flex items-center justify-between mx">
         {/* Brand Logo */}
         <Link to="/">
           <div className="flex items-center text-gray-800 text-3xl font-bold">

@@ -31,12 +31,12 @@ const Projects = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-8 py-10">
+    <div className="px-4 sm:px-20 py-10">
       <h2 className="text-5xl font-extrabold  text-blue-600 mb-12">My Projects</h2>
-      <p className=" text-gray-600 text-lg w-10/12 md:w-11/12 mx-auto mb-12">
+      <p className=" text-gray-600 text-lg  mb-12">
     Explore my collection of web development projects showcasing my skills in building interactive, responsive, and user-friendly applications. Each project is designed to solve real-world problems with a focus on clean code and innovative solutions.
   </p>
-      <div className="grid grid-cols-1 gap-10 md:w-11/12 mx-auto">
+      <div className="grid grid-cols-1 gap-10">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}

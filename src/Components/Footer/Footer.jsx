@@ -3,8 +3,8 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-6 md:px-12">
+    <footer className="bg-gray-600 text-white py-8">
+      <div className="container mx-auto px-4 sm:px-20">
         {/* Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
           <div className="text-center md:text-left mb-6 md:mb-0">
@@ -23,7 +23,7 @@ const Footer = () => {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/abubokkorsiddik/"
+              href="https://www.linkedin.com/in/abubokkor"
               target="_blank"
               rel="noopener noreferrer"
               className="text-teal-500 hover:text-teal-400 transition duration-300"
@@ -31,7 +31,7 @@ const Footer = () => {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://twitter.com/AbuBokkorSiddik"
+              href="https://twitter.com/AbuBokkor98"
               target="_blank"
               rel="noopener noreferrer"
               className="text-teal-500 hover:text-teal-400 transition duration-300"
@@ -39,7 +39,7 @@ const Footer = () => {
               <FaTwitter size={24} />
             </a>
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:mail.abubokkor@gmail.com"
               className="text-teal-500 hover:text-teal-400 transition duration-300"
             >
               <FaEnvelope size={24} />
