@@ -6,7 +6,6 @@ import {
   FaArrowDown,
   FaFacebook,
   FaGithub,
-  FaInstagram,
   FaTelegram,
   FaTwitter,
 } from "react-icons/fa";
@@ -20,16 +19,11 @@ const socialLinks = [
     icon: <FaGithub />,
   },
   { href: "https://t.me/AbuBokkor98", label: "Telegram", icon: <FaTelegram /> },
-  { href: "https://twitter.com/AB_coc", label: "Twitter", icon: <FaTwitter /> },
+  { href: "https://twitter.com/AbuBokkor98", label: "Twitter", icon: <FaTwitter /> },
   {
     href: "https://www.facebook.com/ParadoxicalAb",
     label: "Facebook",
     icon: <FaFacebook />,
-  },
-  {
-    href: "https://www.instagram.com/axdab/",
-    label: "Instagram",
-    icon: <FaInstagram />,
   },
 ];
 
@@ -99,7 +93,7 @@ export default function Banner() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
             <Link
-              to="mailto:abubokkorsiddik698@hotmail.com"
+              to="mailto:mail.abubokkor@gmail.com"
               target="_blank"
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg transition-all hover:bg-blue-500 shadow-md"
               aria-label="Email Abu Bokkor Siddik"
@@ -108,7 +102,7 @@ export default function Banner() {
               Mail me
             </Link>
             <a
-              href="https://drive.google.com/file/d/1oW7zbt3rhbwYBF_Z7zWGEqjb3P7f4NYi/view"
+              href="https://drive.google.com/file/d/1sHxeUfR83GJ2FS4bQhjBrdfIJwVXuAhz/view"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-transparent border border-blue-600 text-blue-600 font-semibold rounded-lg transition-all hover:bg-blue-600 hover:text-white shadow-md"
