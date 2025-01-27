@@ -59,7 +59,7 @@ const Skills = () => {
   return (
     <section className="py-16 text-gray-800 bg-gray-50">
       <div className="px-4 sm:px-20 text-center">
-        <h2 className="text-5xl font-extrabold text-blue-600 mb-8">Skills</h2>
+        <h2 className="text-4xl font-bold text-blue-600 mb-8">Skills</h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill, index) => (
             <article

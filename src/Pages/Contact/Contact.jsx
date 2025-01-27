@@ -63,7 +63,7 @@ const Contact = () => {
     >
       <header className="flex justify-between items-center mb-12">
         {/* Header */}
-        <h2 className="text-4xl font-bold text-blue-600">Contact Me:</h2>
+        <h2 className="text-4xl font-bold text-blue-600">Contact Me</h2>
       </header>
       {/* Contact Information */}
       <div className="p-8">

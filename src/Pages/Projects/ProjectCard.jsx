@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const ProjectCard = ({
-  images, // This will now be an array of images
+  images,
   title,
   description,
   techStack,
@@ -19,7 +19,7 @@ const ProjectCard = ({
   return (
     <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
       {/* Image Section with Swiper */}
-      <div className="w-full md:w-1/3 flex-grow flex">
+      <div className="w-full md:w-1/3 flex-grow flex-shrink-0">
         <Swiper
           spaceBetween={10}
           loop={true}
@@ -96,5 +96,6 @@ const ProjectCard = ({
     </div>
   );
 };
+
 
 export default ProjectCard;
