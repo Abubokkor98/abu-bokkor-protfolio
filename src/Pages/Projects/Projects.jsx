@@ -58,7 +58,7 @@ const Projects = () => {
         "Framer Motion",
       ],
       liveLink: "https://playgear.netlify.app",
-      githubLink: "https://github.com/Abubokkor98/playgear",
+      githubLink: "https://github.com/Abubokkor98/playGear-client",
     },
   ];
 
