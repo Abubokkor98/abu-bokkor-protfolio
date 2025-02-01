@@ -13,7 +13,7 @@ export default function About() {
     >
       <header className="flex justify-between items-center mb-12">
         {/* Header */}
-        <h2 className="text-4xl font-bold text-blue-600">About Me</h2>
+        <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">About Me</h2>
 
         {/* Read More Button */}
         <Link

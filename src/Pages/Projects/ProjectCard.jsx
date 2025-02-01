@@ -15,10 +15,20 @@ const ProjectCard = ({
   features,
   liveLink,
   clientLink,
-  serverLink
+  serverLink,
 }) => {
+  // Dynamic colors for tech stack badges
+  const colors = [
+    "bg-teal-500",
+    "bg-blue-500",
+    "bg-purple-500",
+    "bg-red-500",
+    "bg-yellow-500",
+    "bg-orange-500",
+  ];
+
   return (
-    <div className="flex flex-col lg:flex-row lg:h-100 bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="flex flex-col lg:flex-row lg:h-auto bg-white rounded-lg shadow-lg overflow-hidden">
       {/* Image Section with Swiper */}
       <div className="w-full h-56 md:h-auto lg:w-1/2">
         <Swiper
@@ -28,9 +38,7 @@ const ProjectCard = ({
             delay: 2500,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
+          pagination={{ clickable: true }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="w-full h-full"
@@ -41,7 +49,7 @@ const ProjectCard = ({
                 <img
                   src={img}
                   alt={`${title}-image-${index}`}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full max-h-[350px] object-cover rounded-lg"
                 />
               </div>
             </SwiperSlide>
@@ -53,29 +61,34 @@ const ProjectCard = ({
       <div className="p-6 flex flex-col justify-between flex-grow">
         <div>
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">{title}</h3>
-          <p className="text-gray-600 mb-2">{description}</p>
+          <p className="text-gray-600 mb-4">{description}</p>
 
+          {/* Features List */}
           <div className="text-gray-600 mb-4">
             <h4 className="font-semibold text-lg mb-2">Features:</h4>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside space-y-1">
               {features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
             </ul>
           </div>
         </div>
+
+        {/* Tech Stack Badges */}
         <div className="flex flex-wrap gap-2 mb-4">
           {techStack.map((tech, index) => (
             <span
               key={index}
-              className="bg-teal-500 text-white text-xs px-3 py-1 rounded-full"
+              className={`text-white text-xs px-3 py-1 rounded-full ${
+                colors[index % colors.length]
+              }`}
             >
               {tech}
             </span>
           ))}
         </div>
 
-        {/* Actions */}
+        {/* Action Buttons */}
         <div className="mt-4 flex flex-col sm:flex-row items-center gap-4">
           <a
             href={liveLink}
@@ -95,15 +108,17 @@ const ProjectCard = ({
             <span>Client Repo</span>
             <FaGithub />
           </a>
-          <a
-            href={serverLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition"
-          >
-            <span>Server Repo</span>
-            <FaGithub />
-          </a>
+          {serverLink && (
+            <a
+              href={serverLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition"
+            >
+              <span>Server Repo</span>
+              <FaGithub />
+            </a>
+          )}
         </div>
       </div>
     </div>
