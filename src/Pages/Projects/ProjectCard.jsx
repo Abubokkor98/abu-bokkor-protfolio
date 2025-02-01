@@ -14,11 +14,11 @@ const ProjectCard = ({
   techStack,
   features,
   liveLink,
-  githubLink,
-  viewMoreLink,
+  clientLink,
+  serverLink
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row lg:h-100 bg-white rounded-lg shadow-lg overflow-hidden ">
+    <div className="flex flex-col lg:flex-row lg:h-100 bg-white rounded-lg shadow-lg overflow-hidden">
       {/* Image Section with Swiper */}
       <div className="w-full h-56 md:h-auto lg:w-1/2">
         <Swiper
@@ -37,11 +37,13 @@ const ProjectCard = ({
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={img}
-                alt={`${title}-image-${index}`}
-                className="w-full h-full object-cover"
-              />
+              <div className="w-full h-full">
+                <img
+                  src={img}
+                  alt={`${title}-image-${index}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -51,17 +53,8 @@ const ProjectCard = ({
       <div className="p-6 flex flex-col justify-between flex-grow">
         <div>
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">{title}</h3>
-          <p className="text-gray-600 mb-4">{description}</p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {techStack.map((tech, index) => (
-              <span
-                key={index}
-                className="bg-teal-500 text-white text-xs px-3 py-1 rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          <p className="text-gray-600 mb-2">{description}</p>
+
           <div className="text-gray-600 mb-4">
             <h4 className="font-semibold text-lg mb-2">Features:</h4>
             <ul className="list-disc list-inside">
@@ -71,9 +64,19 @@ const ProjectCard = ({
             </ul>
           </div>
         </div>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {techStack.map((tech, index) => (
+            <span
+              key={index}
+              className="bg-teal-500 text-white text-xs px-3 py-1 rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
 
         {/* Actions */}
-        <div className="mt-4 flex items-center gap-4">
+        <div className="mt-4 flex flex-col sm:flex-row items-center gap-4">
           <a
             href={liveLink}
             target="_blank"
@@ -84,24 +87,23 @@ const ProjectCard = ({
             <FaExternalLinkAlt />
           </a>
           <a
-            href={githubLink}
+            href={clientLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition"
           >
-            <span>GitHub</span>
+            <span>Client Repo</span>
             <FaGithub />
           </a>
-          {viewMoreLink && (
-            <a
-              href={viewMoreLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-500 transition"
-            >
-              <span>View More</span>
-            </a>
-          )}
+          <a
+            href={serverLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition"
+          >
+            <span>Server Repo</span>
+            <FaGithub />
+          </a>
         </div>
       </div>
     </div>

@@ -24,12 +24,13 @@ const Projects = () => {
         "TanStack Query",
       ],
       features: [
-        "Employees can log tasks, track hours, and manage work records with real-time updates.",
-        "HR can verify employees, track progress, and initiate salary payments for verified employees.",
-        "Admin can approve HR-initiated salary payments, promote employees to HR, and adjust salaries."
+        "Employees can log tasks, track hours, and manage work records in real time.",
+        "HR can verify employees, track progress, and process salary payments.",
+        "Admin can approve payments, promote employees, and adjust salaries."
       ],
       liveLink: "https://workforcepro.netlify.app",
-      githubLink: "https://github.com/Abubokkor98/workforcepro-client",
+      clientLink: "https://github.com/Abubokkor98/workforcepro-client",
+      serverLink: "https://github.com/Abubokkor98/workforcepro-server",
     },
 
     {
@@ -56,7 +57,8 @@ const Projects = () => {
         "Handle reservations and provide users with reservation status updates.",
       ],
       liveLink: "https://taste-treasury.netlify.app",
-      githubLink: "https://github.com/Abubokkor98/taste-treasury-client",
+      clientLink: "https://github.com/Abubokkor98/taste-treasury-client",
+      serverLink: "https://github.com/Abubokkor98/taste-treasury-server",
     },
 
     {
@@ -82,7 +84,8 @@ const Projects = () => {
         "Dark/light theme toggle for better user experience.",
       ],
       liveLink: "https://playgear.netlify.app",
-      githubLink: "https://github.com/Abubokkor98/playGear-client",
+      clientLink: "https://github.com/Abubokkor98/playGear-client",
+      serverLink: "https://github.com/Abubokkor98/playGear-server",
     },
   ];
 
