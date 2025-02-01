@@ -12,14 +12,15 @@ const ProjectCard = ({
   title,
   description,
   techStack,
+  features,
   liveLink,
   githubLink,
   viewMoreLink,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="flex flex-col lg:flex-row lg:h-100 bg-white rounded-lg shadow-lg overflow-hidden ">
       {/* Image Section with Swiper */}
-      <div className="w-full md:w-1/3 flex-grow flex-shrink-0">
+      <div className="w-full h-56 md:h-auto lg:w-1/2">
         <Swiper
           spaceBetween={10}
           loop={true}
@@ -32,7 +33,7 @@ const ProjectCard = ({
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="w-full"
+          className="w-full h-full"
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
@@ -61,6 +62,14 @@ const ProjectCard = ({
               </span>
             ))}
           </div>
+          <div className="text-gray-600 mb-4">
+            <h4 className="font-semibold text-lg mb-2">Features:</h4>
+            <ul className="list-disc list-inside">
+              {features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Actions */}
@@ -83,19 +92,20 @@ const ProjectCard = ({
             <span>GitHub</span>
             <FaGithub />
           </a>
-          <a
-            href={viewMoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-500 transition"
-          >
-            <span>View More</span>
-          </a>
+          {viewMoreLink && (
+            <a
+              href={viewMoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-500 transition"
+            >
+              <span>View More</span>
+            </a>
+          )}
         </div>
       </div>
     </div>
   );
 };
-
 
 export default ProjectCard;
