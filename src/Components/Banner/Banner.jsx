@@ -6,8 +6,8 @@ import {
   FaArrowDown,
   FaFacebook,
   FaGithub,
-  FaTelegram,
-  FaTwitter,
+  FaLinkedin,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { LuMailOpen } from "react-icons/lu";
 import { Typed } from "react-typed";
@@ -18,8 +18,16 @@ const socialLinks = [
     label: "GitHub",
     icon: <FaGithub />,
   },
-  { href: "https://t.me/AbuBokkor98", label: "Telegram", icon: <FaTelegram /> },
-  { href: "https://twitter.com/AbuBokkor98", label: "Twitter", icon: <FaTwitter /> },
+  {
+    href: "https://www.linkedin.com/in/abubokkor",
+    label: "LinkedIn",
+    icon: <FaLinkedin />,
+  },
+  {
+    href: "https://wa.me/+8801778313311",
+    label: "WhatsApp",
+    icon: <FaWhatsapp />,
+  },
   {
     href: "https://www.facebook.com/ParadoxicalAb",
     label: "Facebook",
@@ -102,7 +110,7 @@ export default function Banner() {
               Mail me
             </Link>
             <a
-              href="https://drive.google.com/file/d/1sHxeUfR83GJ2FS4bQhjBrdfIJwVXuAhz/view"
+              href="https://drive.google.com/file/d/1_CyweUaZC6Zd5_uBrXZBUbbwRNF6fy_D/view"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-transparent border border-blue-600 text-blue-600 font-semibold rounded-lg transition-all hover:bg-blue-600 hover:text-white shadow-md"
