@@ -20,7 +20,7 @@ export default function Navbar() {
       <nav className=" flex items-center justify-between mx">
         {/* Brand Logo */}
         <Link to="/">
-          <div className="flex items-center text-gray-800 text-3xl font-bold">
+          <div className="flex items-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
             AB
           </div>
         </Link>
