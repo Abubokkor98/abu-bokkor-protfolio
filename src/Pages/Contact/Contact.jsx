@@ -87,7 +87,7 @@ const Contact = () => {
         <motion.div
           initial={{ x: "-50vh", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 2, ease: 'easeInOut' }}
           className="space-y-6 text-gray-800"
         >
           <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
@@ -137,7 +137,7 @@ const Contact = () => {
         <motion.div
           initial={{ x: "100vh", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 2, ease: 'easeInOut' }}
           className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl shadow-xl"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
