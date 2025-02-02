@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { LuMailOpen } from "react-icons/lu";
 import { Typed } from "react-typed";
+import { Fade } from "react-awesome-reveal";
 
 const socialLinks = [
   {
@@ -55,14 +56,12 @@ export default function Banner() {
   }, []);
 
   return (
-    <motion.section
+    <div
       id="banner"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
       className="flex flex-col md:flex-row items-center justify-between text-gray-800 bg-white p-6 sm:p-8 w-full px-4 sm:px-20 mt-12"
     >
       {/* Text Section */}
+      <Fade direction="up" duration={1500} triggerOnce>
       <div className="flex-1 text-center sm:text-left ">
         <h5 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-600">
           Hello, I&apos;m Abu Bokkor Siddik
@@ -72,12 +71,7 @@ export default function Banner() {
         </h1>
 
         {/* Social Links */}
-        <motion.div
-          className="mt-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
+        <div className="mt-6">
           <div className="flex items-center justify-center sm:justify-start mb-7">
             <h2 className="mr-5 text-md sm:text-lg font-semibold">
               Follow me on
@@ -120,15 +114,15 @@ export default function Banner() {
               Download my CV
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
-
+      </Fade>
       {/* Image Section */}
       <motion.div
         className="w-full md:w-[280px] md:h-[280px] lg:w-[460px] lg:h-[460px] flex items-center justify-center mt-6 md:mt-0"
-        initial={{ scale: 0.9 }}
+        initial={{ scale: 0.4 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.9 }}
       >
         <img
           src={displayImg}
@@ -136,6 +130,6 @@ export default function Banner() {
           className="w-full h-full object-cover rounded-lg shadow-lg"
         />
       </motion.div>
-    </motion.section>
+    </div>
   );
 }
