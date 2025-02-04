@@ -24,29 +24,6 @@ const Contact = () => {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const { name, email, message } = formData;
-  //   if (!name || !email || !message) {
-  //     setStatus("Please fill in all fields.");
-  //     return;
-  //   }
-  //   emailjs
-  //     .sendForm(
-  //       import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  //       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  //       e.target,
-  //       import.meta.env.VITE_EMAILJS_USER_ID
-  //     )
-  //     .then(
-  //       () => {
-  //         setStatus("Message sent successfully!");
-  //         setFormData({ name: "", email: "", message: "" });
-  //       },
-  //       () => setStatus("Error: Message not sent.")
-  //     );
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = formData;
