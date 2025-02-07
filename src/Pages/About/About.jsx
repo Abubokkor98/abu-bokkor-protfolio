@@ -29,32 +29,33 @@ export default function About() {
       >
         <p>
           Hi, I'm <strong>Abu Bokkor Siddik</strong>, a passionate{" "}
-          <strong>Front-End Developer</strong> who loves building interactive,
-          user-friendly, and scalable web applications. With expertise in{" "}
-          <strong>React.js, Next.js, and TailwindCSS</strong>, I specialize in
-          crafting modern, high-performance user interfaces.
+          <strong>Front-End Developer</strong> focused on creating interactive
+          and user-centric web applications. My programming journey began in my
+          university, where I discovered my love for coding and problem-solving.
+          After learning C and C++, I transitioned to web development and found
+          my passion in JavaScript, React.js, and Next.js.
         </p>
 
         <p className="mt-4">
-          I hold a <strong>BSc in Computer Science and Engineering</strong>{" "}
-          from <strong>Shaikh Burhanuddin Post Graduate College, Dhaka</strong>{" "}
-          (Graduated: 2023). My academic journey strengthened my skills in{" "}
-          <strong>problem-solving, software development, and system design</strong>,
-          shaping my approach to building efficient applications.
+          I enjoy building seamless, responsive, and engaging user interfaces. I
+          take pride in transforming complex requirements into intuitive
+          designs, whether it's crafting components or implementing animations.
+          My goal is always to deliver high-quality, performant web
+          applications, whether solo or in a team.
         </p>
 
         <p className="mt-4">
-          My technical expertise includes{" "}
-          <strong>JavaScript, React Router, REST API integration, and
-          performance optimization</strong>. Additionally, I have hands-on
-          experience with <strong>Node.js, Express.js, and MongoDB</strong>,
-          allowing me to collaborate effectively in full-stack environments.
+          As a person, I’m always eager to learn, grow, and embrace new
+          challenges. I value collaboration, meaningful connections, and
+          contributing to projects that make a positive impact. My goal is to
+          create applications that are both functional and enjoyable for users.
         </p>
 
         <p className="mt-4">
-          Always eager to learn, I actively explore modern web technologies and
-          best practices to stay ahead in the field. My goal is to contribute to
-          impactful projects that deliver seamless digital experiences.
+          I’m excited about the future of web development and the opportunities
+          it holds. My goal is to continue building my skills, collaborating
+          with like-minded individuals, and contributing to impactful projects
+          that make a difference in the world.
         </p>
       </motion.article>
     </section>
