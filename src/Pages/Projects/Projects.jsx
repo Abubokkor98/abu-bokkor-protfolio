@@ -30,7 +30,7 @@ const Projects = () => {
       ],
       liveLink: "https://workforcepro.netlify.app",
       clientLink: "https://github.com/Abubokkor98/workforcepro-client",
-      serverLink: "https://github.com/Abubokkor98/workforcepro-server",
+      // serverLink: "https://github.com/Abubokkor98/workforcepro-server",
     },
 
     {
@@ -58,7 +58,7 @@ const Projects = () => {
       ],
       liveLink: "https://taste-treasury.netlify.app",
       clientLink: "https://github.com/Abubokkor98/taste-treasury-client",
-      serverLink: "https://github.com/Abubokkor98/taste-treasury-server",
+      // serverLink: "https://github.com/Abubokkor98/taste-treasury-server",
     },
 
     {
@@ -85,7 +85,7 @@ const Projects = () => {
       ],
       liveLink: "https://playgear.netlify.app",
       clientLink: "https://github.com/Abubokkor98/playGear-client",
-      serverLink: "https://github.com/Abubokkor98/playGear-server",
+      // serverLink: "https://github.com/Abubokkor98/playGear-server",
     },
   ];
 

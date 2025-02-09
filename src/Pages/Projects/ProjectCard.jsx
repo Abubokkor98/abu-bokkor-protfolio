@@ -105,7 +105,7 @@ const ProjectCard = ({
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition"
           >
-            <span>Client Repo</span>
+            <span>Source Code</span>
             <FaGithub />
           </a>
           {serverLink && (
